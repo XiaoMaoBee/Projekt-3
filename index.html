@@ -15,7 +15,9 @@
 </head>
 <body>
     <!-- HEADER  -->
+    <div class="header-container">
     <header>
+        
         <div class="logo">
             <div class="logo-wrap">
             <img src="./images/kolo-14kb.png" alt="logo">
@@ -31,13 +33,15 @@
             </ul>           
         </nav>
 <!-- dark/light switch  -->
-        <span class="dark-light">Dark/Light</span>
+        <span class="dark-light">Světlý/Tmavý</span>
 <!-- menu icon  -->
         <div class="menu-icon">
             <i id="nav-icon" class="fa-solid fa-bars "></i>
             <!-- <i id="nav-icon" class="fa-solid fa-xmark fa-lg"></i> -->
         </div>
+    
     </header>
+</div>
 
     <main>
         <!-- WELCOME SECTION  -->
@@ -45,7 +49,7 @@
     <div class="welcome-intro">
             <h1 class="welcome-title">Na kole světem </h1>
         <div class="welcome-description">
-            <p>Kolo je cesta ke zdraví, zábavě a poznávání.</p><p>Šlapejte za dobrodružstvím ve světě, nebo za příjemnou projížďkou a poznáváním krásné České republiky </p>
+            <p>Kolo je cesta ke zdraví, zábavě a poznávání.</p><p>Šlapejte za dobrodružstvím ve světě, nebo za příjemnou projížďkou po krásné České republice. </p>
         </div>
     </div>
     
@@ -64,10 +68,36 @@
 
         <!-- CONTENT SECTION -->
         <section class="content-section">
-            <h2 class="contact-form-title">VIP kontakt pro členy týmu</h2>
+            <div class="content-narrow-container">
+            
+            
+             <!-- REGISTER FORM  -->
+             <div class="register-wrapper">
+             <h2 class="contact-form-title">Registruj se do týmu</h2>
+             <form class="register-form">
+                 <input type="text" placeholder="  Jméno" class="firstname"><br>
+                 <input type="text" placeholder="  Příjmení" class="surname"><br>
+                 <select id="country" name="country">
+                     <option value="topic">Vyber hlavní zájem</option>
+                     <option value="trip-world">Výlet zahraničí</option>
+                     <option value="trip-cr">Výlet ČR</option>
+                     <option value="konzultace">Konzultace</option>
+                     <option value="jine">Jiné</option>
+                   </select><br>
+                 <input type="email" placeholder="  Email" class="email"><br>
+                 <input type="password" placeholder="  Zvol heslo" class="pass1"><br>
+                 <input type="password" placeholder="  Heslo znovu" class="pass2"><br>
+                 
+                 <textarea placeholder="  Tvoje zpráva" class="message"></textarea><br>
+                 <button class="submit-btn">Odeslat</button>
+             </form>
+             <button><i class="fa-solid fa-angles-up"></i><a href="./"></a></button>
+            </div>
 
-            <!-- FORM  -->
-            <form class="contact-form-vip">
+            <!-- CONTACT FORM  -->
+            <div class="contact-form-wrapper">
+            <h2 class="contact-form-title">Napiš nám</h2>
+            <form class="contact-form">
                 <input type="text" placeholder="  Jméno" class="firstname"><br>
                 <input type="text" placeholder="  Příjmení" class="surname"><br>
                 <select id="country" name="country">
@@ -76,26 +106,26 @@
                     <option value="trip-cr">Výlet ČR</option>
                     <option value="konzultace">Konzultace</option>
                     <option value="jine">Jiné</option>
-                  </select><br>
-                <input type="password" placeholder="  Členské heslo" class="pass1"><br>
-                <input type="password" placeholder="  Členské heslo znovu" class="pass2"><br>
+                  </select><br>                
                 <input type="email" placeholder="  Email" class="email"><br>
                 <textarea placeholder="  Tvoje zpráva" class="message"></textarea><br>
                 <button class="submit-btn">Odeslat</button>
             </form>
-            <button><i class="fa-solid fa-angles-up"></i><a href="./"></a></button>
+            <button><a href="./index.html"><i class="fa-solid fa-angles-up"></i></a></button>
+        </div>
+            
         </section>
+    </div>
+    </div>
     </main>
 
         <!-- FOOTER -->
         <footer>
                 <ul class="footer-info">
-                    <li class="contact-me">Contact me ...</li>
-                    <li class="phone">      Phone: 123456789</li>
+                    <li class="contact-me">Kontaktuj mě ...</li>
+                    <li class="phone">      Tel: +420 777 987 852</li>
                     <li class="email">Email: <a href="mailto:email@email.cz">email@email.cz</a></li>    
-                </ul>
-                
-                
+                </ul>                
         </footer>
     
     <script src="./script.js"></script>

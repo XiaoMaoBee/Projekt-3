@@ -23,6 +23,10 @@ nekoušou a jsou nápomocní ;)*/
 
 /* HEADER  */
 
+.header-container {
+  background-color: var(--light-blue);
+}
+
 .logo {
   flex-grow: 1;
 }
@@ -32,7 +36,6 @@ nekoušou a jsou nápomocní ;)*/
   height: 60px;
   border-radius: 50px;
   background-color: whitesmoke;
-  margin-left: 30px;
 }
 
 .logo img {
@@ -46,6 +49,8 @@ header {
   align-items: center;
   background-color: var(--light-blue);
   height: 70px;
+  width: 85vw;
+  margin: 0 auto;
 }
 
 header nav {
@@ -116,6 +121,7 @@ li a {
 /* WELCOME SECTION  */
 
 .welcome-section {
+  z-index: 2;
   height: calc(100vh - 70px);
   background-image: url("./images/doma/silnice-mraky-kojal.jpg");
   background-size: cover;
@@ -137,17 +143,16 @@ margin-bottom: 15px;
 .welcome-intro {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 40px;
-    width: 600px;
+    margin-bottom: 90px;
+    max-width: 600px;
 }
 
 .welcome-gallery {
     background-color: rgba(89, 180, 195, 0.5);
-    ;
-    height: 300px;
-    width: 1000px;
+    padding: 20px;
+    height: 340px;
+    width: 85vw;
     border-radius: 10px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,8 +160,8 @@ margin-bottom: 15px;
 }
 
 .img1-wrapper, .img2-wrapper, .img3-wrapper {
-    width: 300px;
-    height: 250px;
+    width: 470px;
+    height: 300px;
 }
 .img1-wrapper img,.img2-wrapper img,.img3-wrapper img {
     border-radius: 10px;
@@ -166,22 +171,25 @@ margin-bottom: 15px;
     object-position: right;
 }
 
-/* CONTENT SECTION - FORM  */
+/* CONTENT SECTION - FORMS  */
 
-main {
-    
+
+.content-section {
+  background-color: var(--lightest-orange);
 }
-.content-section {   
+.content-narrow-container {   
+  width: 85vw;
+  margin: 0 auto;
     position: relative ; 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--lightest-orange);
-    ;
+    gap: 50px;
+    /* justify-content:space-between; */
+    /* align-items: center;  */
+    /* flex-direction: column; */
+    /* background-color: var(--lightest-orange); */
 }
 
-.content-section .fa-angles-up {
+.fa-angles-up {
     position:absolute ;
     background-color: var(--dark-orange);
     border-radius: 10px;
@@ -189,41 +197,52 @@ main {
     width: 50px;
     height: 70px;
     line-height: 70px;
-    bottom: 20px;
+    bottom: 40px;
     right: 30px
+}
+.register-wrapper, .contact-form-wrapper {
+  width: 390px;
 }
 
 .contact-form-title {
     padding: 20px;
 }
 
-.contact-form-vip {
+.contact-form, .register-form {
     padding: 20px;
     background-color: var(--dark-orange);
     margin-bottom: 20px;
     border-radius: 10px;
+    max-width: 390px;
 }
 
-.contact-form-vip input {
+.contact-form input, .register-form input {
     margin-bottom: 5px;
     height: 35px;
     width: 350px
 }
 
-.contact-form-vip select {
+.contact-form select, .register-form select {
     margin-bottom: 5px;
     height: 35px;
     width: 350px;
 }
 
-.contact-form-vip textarea {
+.register-form textarea {
+  margin-top: 20px;
+  line-height: 30px;
+  height: 100px;
+  width: 350px;
+}
+
+.contact-form textarea {
     margin-top: 20px;
     line-height: 30px;
-    height: 200px;
+    height: 180px;
     width: 350px;
 }
 
-.contact-form-vip button {
+.contact-form button, .register-form button {
     height: 35px;
     width: 350px
 }
