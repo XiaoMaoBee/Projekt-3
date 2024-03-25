@@ -74,7 +74,7 @@
             <div class="contact-form-wrapper">
                 <h2 class="contact-form-title">Napiš nám</h2>
                 <form class="contact-form">
-                    <input type="text" placeholder="  Jméno" class="firstname"><br>
+                    <input type="text" placeholder="  Jméno" class="firstname" required><br>
                     <input type="text" placeholder="  Příjmení" class="surname"><br>
                     <select id="country" name="country">
                         <option value="topic">Vyber téma</option>
@@ -83,8 +83,8 @@
                         <option value="konzultace">Konzultace</option>
                         <option value="jine">Jiné</option>
                       </select><br>                
-                    <input type="email" placeholder="  Email" class="email"><br>
-                    <textarea placeholder="  Tvoje zpráva" class="message"></textarea><br>
+                    <input type="email" placeholder="  Email" class="email" required><br>
+                    <textarea placeholder="  Tvoje zpráva" class="message" required></textarea><br>
                     <button class="submit-btn">Odeslat</button>
                 </form>
             </div>
@@ -94,8 +94,8 @@
              <div class="register-wrapper">
              <h2 class="contact-form-title">Registruj se do týmu</h2>
              <form class="register-form">
-                 <input type="text" placeholder="  Jméno" class="firstname"><br>
-                 <input type="text" placeholder="  Příjmení" class="surname"><br>
+                 <input type="text" placeholder="  Jméno" class="firstname" required><br>
+                 <input type="text" placeholder="  Příjmení" class="surname" required><br>
                  <select id="country" name="country">
                      <option value="topic">Vyber hlavní zájem</option>
                      <option value="trip-world">Výlet zahraničí</option>
@@ -103,12 +103,14 @@
                      <option value="konzultace">Konzultace</option>
                      <option value="jine">Jiné</option>
                    </select><br>
-                 <input type="email" placeholder="  Email" class="email"><br>
-                 <input type="password" placeholder="  Zvol heslo" class="pass1"><br>
-                 <input type="password" placeholder="  Heslo znovu" class="pass2"><br>
+                 <input type="email" placeholder="  Email" class="email" required><br>
+                 <input type="password" placeholder="  Zvol heslo" class="pass1" required><br>
+                 <input type="password" placeholder="  Heslo znovu" class="pass2" required><br>
+                 <p class="pass-checker"></p>
                  
                  <textarea placeholder="  Tvoje zpráva" class="message"></textarea><br>
                  <button class="submit-btn">Odeslat</button>
+                 
              </form>
              <div class="btn-up">
                 <a href="./index.html"><i class="fa-solid fa-angles-up"></i></a>

@@ -25,6 +25,13 @@ nekoušou a jsou nápomocní ;)*/
 
 /* Dark/Light Mode  */
 
+.dark {
+
+}
+
+.light {
+  
+}
 
 
 
@@ -236,7 +243,9 @@ margin-bottom: 15px;
     max-width: 390px;
 }
 
-.contact-form input, .register-form input {
+.contact-form input,.contact-form select, .contact-form textarea,
+.register-form input, .register-form select, .register-form textarea  {
+  padding-left: 5px;
     margin-bottom: 5px;
     height: 35px;
     width: 350px
@@ -246,6 +255,20 @@ margin-bottom: 15px;
     margin-bottom: 5px;
     height: 35px;
     width: 350px;
+}
+
+.pass-checker {
+  padding-left: 5px;
+  margin: 0;
+  background-color: var(--nav-color);
+}
+
+.valid {
+  color: var(--dark-blue);
+}
+
+.invalid {
+  color: red;  
 }
 
 .register-form textarea {
