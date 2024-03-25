@@ -1,4 +1,4 @@
-// Proměnné pro menu manipulaci 
+// Proměnné pro menu manipulaci menu
 const menuIcon = document.querySelector('.menu-icon')
 const menuList = document.querySelector('nav')
 const hamburgerIcon = document.querySelector('.fa-solid')   
@@ -21,7 +21,6 @@ menuIcon.addEventListener('click', () => {
 // Button nahoru 
 
 const btnUp = document.querySelector('.fa-angles-up');
-
 btnUp.addEventListener('click', () => {
     
 })

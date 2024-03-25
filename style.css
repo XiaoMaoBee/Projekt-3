@@ -21,6 +21,14 @@ nekoušou a jsou nápomocní ;)*/
   font-family: "Roboto", sans-serif;
 }
 
+
+
+/* Dark/Light Mode  */
+
+
+
+
+
 /* HEADER  */
 
 .header-container {
@@ -156,13 +164,22 @@ margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .img1-wrapper, .img2-wrapper, .img3-wrapper {
     width: 470px;
     height: 300px;
+    border: 3px solid var(--dark-blue);
+    border-radius: 10px;
+    transition: transform 0.25s;
 }
+
+.img1-wrapper:hover, .img2-wrapper:hover, .img3-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
 .img1-wrapper img,.img2-wrapper img,.img3-wrapper img {
     border-radius: 10px;
     width: 100%;
@@ -170,6 +187,7 @@ margin-bottom: 15px;
     object-fit: cover;
     object-position: right;
 }
+
 
 /* CONTENT SECTION - FORMS  */
 
@@ -189,17 +207,19 @@ margin-bottom: 15px;
     /* background-color: var(--lightest-orange); */
 }
 
-.fa-angles-up {
-    position:absolute ;
+.btn-up {
+  position:absolute ;
+  bottom: 40px;
+    right: 0px;
     background-color: var(--dark-orange);
     border-radius: 10px;
     font-size: 25px;
     width: 50px;
     height: 70px;
     line-height: 70px;
-    bottom: 40px;
-    right: 30px
+    text-align: center;
 }
+
 .register-wrapper, .contact-form-wrapper {
   width: 390px;
 }
@@ -211,7 +231,7 @@ margin-bottom: 15px;
 .contact-form, .register-form {
     padding: 20px;
     background-color: var(--dark-orange);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 10px;
     max-width: 390px;
 }
