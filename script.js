@@ -20,10 +20,18 @@ menuIcon.addEventListener('click', () => {
 
 // Button nahoru 
 
-const btnUp = document.querySelector('.fa-angles-up');
-btnUp.addEventListener('click', () => {
-    
+const btnUp = document.querySelector('.btn-up');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY >= 560) {
+        btnUp.style.display = "block";
+    } else {
+        btnUp.style.display = "none";
+    }
+
 })
+
+
 
 // Verifikace hesla
 const pass1 = document.querySelector(".pass1")
@@ -48,7 +56,6 @@ pass1.addEventListener("input", () => {
     }
 })
 
-
     pass2.addEventListener("input", () => {
         const pass1Value = pass1.value
         const pass2Value = pass2.value
@@ -66,4 +73,35 @@ pass1.addEventListener("input", () => {
             passChecker.textContent = ""
             
         }
-})
+
+    })
+
+        // dark/light přepínač 
+
+        const header = document.querySelector("header")
+        const headerContainer = document.querySelector(".header-container")
+        const contentSection = document.querySelector(".content-section")
+        const footer = document.querySelector("footer")
+        const darkLightSwitch = document.querySelector(".dark-light")
+        const contactForm = document.querySelector(".contact-form")
+        const registerForm = document.querySelector(".register-form")
+        const body = document.querySelector('body')
+        const aboutSection = document.querySelector('.about-section')
+        const blog = document.querySelector('.blog-section')
+
+
+        
+        darkLightSwitch.addEventListener("click", () => {
+
+            headerContainer.classList.toggle('dark-header')
+            header.classList.toggle('dark-header')
+            footer.classList.toggle('dark-footer')
+            darkLightSwitch.classList.toggle('dark-light-switch')
+            contactForm.classList.toggle('dark-forms')
+            registerForm.classList.toggle('dark-forms')   
+            btnUp.classList.toggle('button-up') 
+            body.classList.toggle('dark-content')
+            aboutSection.classList.toggle('dark-black')
+            blog.classList.toggle('dark-black')
+                    
+        })

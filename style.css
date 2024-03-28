@@ -9,37 +9,56 @@
   --lightest-orange: rgba(251, 168, 52,0.5)
 }
 
-/* NEBOJÍM SE ZEPTAT !!!! 
-
-Pokud nevím, nehádám. Hledám na webu nebo se zeptám lektorů přes Discord, 
-nekoušou a jsou nápomocní ;)*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-}
-
-
-
-/* Dark/Light Mode  */
-
-.dark {
-
-}
-
-.light {
   
 }
 
+body {
+  background-color: var(--light-blue);
+}
 
+/* Dark/Light Mode  */
+
+.dark-light-switch {
+  color: var(--nav-color);
+}
+.dark-header {
+  background-color: var(--dark-blue) !important;
+}
+.dark-footer{
+  background-color: var(--dark-blue);
+}
+.dark-content{
+  background-color:rgb(0, 0, 0, 0.8)  !important;
+  color: var(--nav-color)
+}
+.dark-forms {
+  background-color:var(--light-blue) !important;
+}
+.button-up {
+  background-color: var(--light-blue) !important;
+  color: var(--nav-color) !important;
+}
+.button-up .fa-solid {
+  color: var(--nav-color) !important;
+}
+.dark-black {
+  background-color: black !important;
+}
 
 
 /* HEADER  */
 
 .header-container {
   background-color: var(--light-blue);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -88,6 +107,7 @@ li a {
 .dark-light {
   display: inline-block;
   margin-right: 30px;
+  cursor:pointer;
 }
 
 .menu-icon {
@@ -113,7 +133,7 @@ li a {
 
   header nav {
     position: absolute;
-    background-color: var(--light-blue);
+    background-color: rgb(89, 180, 195, 0.5);
     top: 70px;
     width: 100%;
     display: none ;
@@ -133,11 +153,17 @@ li a {
   }
 }
 
+@media (max-width:450px) {
+  .welcome-intro {
+    margin-bottom: 50px !important;
+  }
+}
+
 /* WELCOME SECTION  */
 
 .welcome-section {
   z-index: 2;
-  height: calc(100vh - 70px);
+  height: calc(100vh);
   background-image: url("./images/doma/silnice-mraky-kojal.jpg");
   background-size: cover;
   background-position: center;
@@ -151,14 +177,14 @@ li a {
 
 .welcome-title {
 font-size: 60px;
-margin-top: 20px;
+margin-top: 100px;
 margin-bottom: 15px;
 }
 
 .welcome-intro {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
     max-width: 600px;
 }
 
@@ -199,36 +225,31 @@ margin-bottom: 15px;
 /* CONTENT SECTION - FORMS  */
 
 
-.content-section {
-  background-color: var(--lightest-orange);
-}
 .content-narrow-container {   
   width: 85vw;
   margin: 0 auto;
-    position: relative ; 
-    display: flex;
-    gap: 50px;
-    /* justify-content:space-between; */
-    /* align-items: center;  */
-    /* flex-direction: column; */
-    /* background-color: var(--lightest-orange); */
+  display: flex;
+  justify-content:space-evenly;
+  gap: 50px;
 }
 
 .btn-up {
-  position:absolute ;
-  bottom: 40px;
-    right: 0px;
-    background-color: var(--dark-orange);
-    border-radius: 10px;
-    font-size: 25px;
-    width: 50px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
+  position:fixed ;
+  display:none;
+  bottom: 5px;
+  right: 7.2vw;
+  background-color: var(--dark-orange);
+  border-radius: 10px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 
 .register-wrapper, .contact-form-wrapper {
-  width: 390px;
+  max-width: 390px;
+  width: calc(100% / 2);
 }
 
 .contact-form-title {
@@ -240,21 +261,26 @@ margin-bottom: 15px;
     background-color: var(--dark-orange);
     margin-bottom: 40px;
     border-radius: 10px;
-    max-width: 390px;
+    max-width: 100%;
 }
 
-.contact-form input,.contact-form select, .contact-form textarea,
-.register-form input, .register-form select, .register-form textarea  {
+.contact-form input,
+.contact-form select, 
+.contact-form textarea,
+.register-form input, 
+.register-form select, 
+.register-form textarea  {
   padding-left: 5px;
     margin-bottom: 5px;
     height: 35px;
-    width: 350px
+    width: 100%
 }
 
-.contact-form select, .register-form select {
+.contact-form select, 
+.register-form select {
     margin-bottom: 5px;
     height: 35px;
-    width: 350px;
+    width: 100%;
 }
 
 .pass-checker {
@@ -275,20 +301,223 @@ margin-bottom: 15px;
   margin-top: 20px;
   line-height: 30px;
   height: 100px;
-  width: 350px;
+  width: 100%;
 }
 
 .contact-form textarea {
     margin-top: 20px;
     line-height: 30px;
     height: 180px;
-    width: 350px;
+    width: 100%;
 }
 
-.contact-form button, .register-form button {
+.contact-form button, 
+.register-form button {
     height: 35px;
-    width: 350px
+    width: 100%
 }
+
+@media (max-width: 760px) {
+  .content-narrow-container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .contact-form-wrapper, 
+  .register-wrapper {
+    width: 80vw;    
+  }
+
+  .welcome-gallery .img1-wrapper, 
+  .welcome-gallery .img3-wrapper {
+    display:none;
+  }
+}
+
+/* ABOUT SECTION */
+
+.about-narrow-container, 
+.trails-narrow-container, 
+.blog-narrow-container {
+  width: 85vw;
+  margin: 0 auto;
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-section {  
+  background-color: var(--light-orange);
+  
+}
+
+.about-title {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.about-picture1-wrapper, 
+.about-picture2-wrapper, 
+.about-description {
+  width: 60vw;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.my-bike, .me {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+}
+
+
+
+/* EVENTS AND TRAILS SECTION  */
+
+.events-trails-title {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.trails-description {
+  width: 60vw;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.events-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+  }
+
+  .events-title {
+    margin-bottom: 20px;
+  }
+
+  .events-wrapper ul li {
+display: block;
+margin-bottom: 30px;
+  }
+
+  .trails-wrapper {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .trails-title,
+  .adamov,
+  .jedovnice,
+  .palava {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+  }
+
+
+
+  /* EVENTS TABLES  */
+
+  .events-table1, .events-table2 {
+    /* border-collapse: collapse; */
+    border: 3px solid rgb(140 140 140);
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  .events-table2 {
+    display:none
+  }
+  
+  caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  thead,
+  tfoot {
+    background-color: rgba(228, 240, 245, 0.756);
+  }
+  
+  th,
+  td {
+    border: 2px solid rgb(160 160 160);
+    padding: 8px 10px;
+  }
+  
+  td:last-of-type {
+    text-align: center;
+  }
+  
+  tbody > tr:nth-of-type(even) {
+    background-color: rgb(228, 240, 245, 0.756);
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+  }
+
+  @media (max-width: 760px) {
+    .events-table2 {
+      display: block;
+    }
+    .events-table1 {
+      display: none;
+    }
+  }
+
+
+/* BLOG SECTION  */
+.blog-section {
+  background-color: var(--light-orange);
+  text-align: center;
+}
+
+.blog-title {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.blog-description {
+  margin-bottom: 30px;
+  width: 60vw;
+  max-width: 600px;
+
+}
+.article1-wrapper {
+  width: 60vw;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 2px solid ;
+}
+
+.article1-wrapper {
+  width: 60vw;
+  max-width: 600px;
+  margin: 20px 0;
+  padding:15px;
+  border-radius: 10px  
+}
+.img-article {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+
+
+
+
 
 /* FOOTER */
 
@@ -297,77 +526,13 @@ footer {
     line-height: 60px;
     color: white;
     text-align: center;
+    /* position: fixed;
+    bottom: 0px;
+    width: 100%; */
 }
 
-
-    
-    
-    
-    /* POŽADAVKY  */
-
-/* Tvým úkolem bude spojit všechny současné znalosti dohromady. 
-Zároveň ti chceme ponechat prostor pro kreativitu. 
-Tvým úkolem bude vytvořit webovou stránku, která bude splňovat následující požadavky:
-
-1 - jednostránkový web
-2 - web je možné přepínat do dark-modu a zpět do light-modu
-3 - web obsahuje header, 2 sekce a footer
-4 - v headeru je responzivní menu minimálně se 3 položkami
-5 - obsah první sekce je na tobě, ale její součástí budou 3 obrázky vedle sebe, 
-    které se po najetí myši budou plynule zvětšovat a po odjetí myši zmenšovat
-6 - v druhé section bude umístěný formulář
-7 - ve formuláři se bude 2x zadávat heslo a formulář bude kontrolovat shodu hesel
-8 - po odscrollování směrem dolů se v pravém dolním rohu objeví ikonka zpět nahoru
-9 - je na tobě, jestli chceš javascriptový kód zapsat procedurálně nebo objektově
-10 - web by měl být responzivní
-11 - snaž se, aby web graficky dobře vypadal (i když hodnocení vzhledu je vždy individuální)    */
-
-/* TIPY  */
-
-/* 1 - použij kódy, které byly v průběhu kurzu vytvořeny (např. responzivní menu, shodu emailů apod.) - jen je musíš upravit podle potřeby
-2 - napodceňuj část před psaním kódu - vezmi tužku a papír (word, jakýkoli program) a načrtni si web, rozmysli jaké budou kroky
-3 - přepínání mezi dark-modem a light-modem můžeš dělat kliknutím na tlačítko, text nebo např. div vytvarovaný do kolečka (stačí mu dát width, height a border-radius 50%) nebo jakkoli jinak
-4 - nejdříve vytvoř responzivní web a poté přidej do stránky javascript
-5 - zvol si téma webu, které tě bude bavit */
-
-
-/* PODSTATA PROJEKTU  */
-/* Tento projekt má otestovat skutečnou programátorskou práci, kdy musíš kombinovat více jazyků dohromady (HTML, CSS, JavaScript). Je zapotřebí si poradit s úpravou kódů, které máš již k dispozici, a použít je v dané situaci. Ta často vyžaduje úpravu kódů - někdy větší, někdy menší. Musíš si správně rozvrhnout práci - čím začneš a jaké budou další kroky. Do stránek budeš implementovat nové prvky, které v kurzu tvořeny nebyly, ale vše pro jejich vytvoření znáš (např. tlačítko zpět nahoru).
-
-Pokud ti cokoli nepůjde, tak jako první zkus vyhledávat a googlit. Určitě se kdykoli můžeš zeptat na Discordu.
-
-Užij si projekt a nezapomeň se na něm pořádně vyřádit. :) */
-
-/* DODATEČNÉ INFO OD HODNOTÍCÍHO LEKTORA  */
-/* Vaše projekty bude hodnotit lektor Šimon. Na základě minulých odevzdaných projektů sdílíme jeho postřehy a dodatečné informace. */
-
-/* NA CO SI DÁT POZOR, JAK TO ŠIMON OPRAVUJE  */
-/* Stránka funguje, obsahuje to, co má podle zadání obsahovat
-K obrázkům, stylům a skriptům jsem dal správné souborové cesty (relativní s ./ na začátku - pozor na /, které má trochu jiný význam)
-Použité je čisté CSS nebo nějaký CSS framework a pro spuštění je potřeba maximálně příkazů yarn, resp. npm install (žádná další konfigurace nebo pluginy do editoru)
-Jinými slovy kdo si chce hrát (React, Vue, Typescript) může, ale ať to pochopí i Šimon :)
-
-POKUD CHCI DOSTAT VÝBORNOU ZNÁMKU
-Tmavý motiv přepínám pouze na jednom místě (třída na <body> nebo nějak podobně) a styly měním pomocí CSS hiearchie
-Používám pouze element.addEventListener, žádné onClick atributy
-Speciální pochvalu dostanu, pokud bude kód i vypadat */
-
-/* NEBOJÍM SE ZEPTAT  */
-/* Pokud nevím, nehádám. Hledám na webu nebo se zeptám lektorů přes Discord, nekoušou a jsou nápomocní ;) */
-
-
-
-
-
-/* ANIMACE OBRÁZKU VYSTOUPENÍ DO POPŘEDÍ PO NAJETÍ MYŠI */
-
-/* .img-wrapper {
-    width: 50%;
-    height: 440px;
-    transition: transform 0.25s;
+@media (max-width: 700px) {
+  footer li.email {
+    display: block;
+  }
 }
-
-.img-wrapper:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-} */;
