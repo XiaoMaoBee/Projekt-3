@@ -1,12 +1,16 @@
 :root {
-  --nav-color: white;
+  --nav-color: rgb(245, 245, 245);
   --dark-blue: rgb(33, 28, 106);
   --light-blue: rgb(89, 180, 195);
+  --light-blue-menu-transparent: rgb(89, 180, 195, 0.5);
   --green: rgb(116, 226, 145);
   --yellow: rgb(239, 243, 150);
   --dark-orange: rgb(255, 137, 17);
   --light-orange: rgb(251, 168, 52);
-  --lightest-orange: rgba(251, 168, 52,0.5)
+  --lightest-orange: rgba(251, 168, 52,0.5);
+  --black-background: rgb(0, 0, 0);
+  --light-black-background: rgba(0,0,0,0.8);
+  --red-alert: rgb(255, 0, 0);
 }
 
 
@@ -34,7 +38,7 @@ body {
   background-color: var(--dark-blue);
 }
 .dark-content{
-  background-color:rgb(0, 0, 0, 0.8)  !important;
+  background-color: var(--light-black-background) !important;
   color: var(--nav-color)
 }
 .dark-forms {
@@ -48,7 +52,7 @@ body {
   color: var(--nav-color) !important;
 }
 .dark-black {
-  background-color: black !important;
+  background-color: var(--black-background) !important;
 }
 
 
@@ -69,7 +73,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background-color: whitesmoke;
+  background-color: var(--nav-color);
 }
 
 .logo img {
@@ -99,7 +103,7 @@ li {
 }
 
 li a {
-  color: whitesmoke;
+  color: var(--nav-color);
   text-decoration: none;
   font-size: 17px;
 }
@@ -122,7 +126,7 @@ li a {
 
   .menu-icon {
     display: block;
-    color: whitesmoke;
+    color: var(--nav-color);
     font-size: 25px;
   }
 
@@ -133,7 +137,7 @@ li a {
 
   header nav {
     position: absolute;
-    background-color: rgb(89, 180, 195, 0.5);
+    background-color: var(--light-blue-menu-transparent);
     top: 70px;
     width: 100%;
     display: none ;
@@ -189,7 +193,7 @@ margin-bottom: 15px;
 }
 
 .welcome-gallery {
-    background-color: rgba(89, 180, 195, 0.5);
+    background-color: var(--light-blue-menu-transparent);
     padding: 20px;
     height: 340px;
     width: 85vw;
@@ -200,7 +204,9 @@ margin-bottom: 15px;
     gap: 15px;
 }
 
-.img1-wrapper, .img2-wrapper, .img3-wrapper {
+.img1-wrapper, 
+.img2-wrapper, 
+.img3-wrapper {
     width: 470px;
     height: 300px;
     border: 3px solid var(--dark-blue);
@@ -208,12 +214,16 @@ margin-bottom: 15px;
     transition: transform 0.25s;
 }
 
-.img1-wrapper:hover, .img2-wrapper:hover, .img3-wrapper:hover {
+.img1-wrapper:hover, 
+.img2-wrapper:hover, 
+.img3-wrapper:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 5px -2px 15px var(--nav-color);
 }
 
-.img1-wrapper img,.img2-wrapper img,.img3-wrapper img {
+.img1-wrapper img,
+.img2-wrapper img,
+.img3-wrapper img {
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -247,7 +257,8 @@ margin-bottom: 15px;
   text-align: center;
 }
 
-.register-wrapper, .contact-form-wrapper {
+.register-wrapper, 
+.contact-form-wrapper {
   max-width: 390px;
   width: calc(100% / 2);
 }
@@ -256,7 +267,8 @@ margin-bottom: 15px;
     padding: 20px;
 }
 
-.contact-form, .register-form {
+.contact-form, 
+.register-form {
     padding: 20px;
     background-color: var(--dark-orange);
     margin-bottom: 40px;
@@ -294,7 +306,7 @@ margin-bottom: 15px;
 }
 
 .invalid {
-  color: red;  
+  color: var(--red-alert);  
 }
 
 .register-form textarea {
@@ -317,6 +329,13 @@ margin-bottom: 15px;
     width: 100%
 }
 
+.contact {
+  text-align: center;
+  padding-bottom: 20px;
+
+
+}
+
 @media (max-width: 760px) {
   .content-narrow-container {
     flex-direction: column;
@@ -327,12 +346,22 @@ margin-bottom: 15px;
   .register-wrapper {
     width: 80vw;    
   }
-
   .welcome-gallery .img1-wrapper, 
   .welcome-gallery .img3-wrapper {
     display:none;
   }
 }
+
+@media (max-width: 460px) {
+.welcome-intro {
+    width: 90%;
+  }
+
+  .about-title {
+    font-size: 45px;
+  }
+}
+
 
 /* ABOUT SECTION */
 
@@ -348,8 +377,7 @@ margin-bottom: 15px;
 }
 
 .about-section {  
-  background-color: var(--light-orange);
-  
+  background-color: var(--light-orange);  
 }
 
 .about-title {
@@ -371,9 +399,25 @@ height: 100%;
 border-radius: 10px;
 }
 
+@media (max-width: 460px) {
+.about-picture1-wrapper, 
+.about-picture2-wrapper, 
+.about-description {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 45px;
+  }
+}
+
 
 
 /* EVENTS AND TRAILS SECTION  */
+
+.trails-narrow-container {
+  text-align: center;
+}
 
 .events-trails-title {
   margin-bottom: 30px;
@@ -387,7 +431,6 @@ border-radius: 10px;
 }
 
 .events-wrapper {
-  text-align: center;
   margin-bottom: 30px;
   }
 
@@ -395,14 +438,12 @@ border-radius: 10px;
     margin-bottom: 20px;
   }
 
-  .events-wrapper ul li {
-display: block;
-margin-bottom: 30px;
+  .trails-wrapper {
+    width: 50%;
   }
 
-  .trails-wrapper {
-    width: 40%;
-    text-align: center;
+  .trails-wrapper h3 {
+    margin-bottom: 15px;
   }
   
   .trails-title,
@@ -411,20 +452,14 @@ margin-bottom: 30px;
   .palava {
     margin-bottom: 20px;
   }
-
-  h3 {
-    margin-bottom: 15px;
-  }
-
-
+  
 
   /* EVENTS TABLES  */
 
-  .events-table1, .events-table2 {
-    /* border-collapse: collapse; */
+  .events-table1, 
+  .events-table2 {
     border: 3px solid rgb(140 140 140);
     border-radius: 10px;
-    font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-bottom: 30px;
@@ -475,6 +510,18 @@ margin-bottom: 30px;
     }
   }
 
+  @media (max-width: 460px) {
+    .trails-wrapper,
+    .trails-description {
+      width: 100%;
+    }
+
+    .events-trails-title {
+      font-size: 45px;
+      text-align: center;
+    }
+  }
+
 
 /* BLOG SECTION  */
 .blog-section {
@@ -491,20 +538,14 @@ margin-bottom: 30px;
   margin-bottom: 30px;
   width: 60vw;
   max-width: 600px;
-
-}
-.article1-wrapper {
-  width: 60vw;
-  max-width: 600px;
-  margin-bottom: 20px;
-  border: 2px solid ;
 }
 
-.article1-wrapper {
+.article-wrapper {
   width: 60vw;
   max-width: 600px;
   margin: 20px 0;
   padding:15px;
+  border: 2px solid;
   border-radius: 10px  
 }
 .img-article {
@@ -514,21 +555,24 @@ margin-bottom: 30px;
   border-radius: 10px;
 }
 
+@media (max-width: 460px) {
+  .article-wrapper,
+  .blog-description {
+    width: 100%;
+  }
 
-
-
-
+  .blog-title {
+    font-size: 45px;
+  }
+}
 
 /* FOOTER */
 
 footer {
     background-color: var(--light-blue);
     line-height: 60px;
-    color: white;
+    color: var(--nav-color);
     text-align: center;
-    /* position: fixed;
-    bottom: 0px;
-    width: 100%; */
 }
 
 @media (max-width: 700px) {

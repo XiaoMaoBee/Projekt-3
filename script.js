@@ -3,9 +3,9 @@ const menuIcon = document.querySelector('.menu-icon')
 const menuList = document.querySelector('nav')
 const hamburgerIcon = document.querySelector('.fa-solid')   
 
-// Menu manipulace 
+// Menu manipulace otevření/zavření
 menuIcon.addEventListener('click', () => {
-    console.log('kliknutí');
+    
     if(hamburgerIcon.classList[1] === 'fa-bars') {
         hamburgerIcon.classList.add('fa-xmark')
         hamburgerIcon.classList.remove('fa-bars')
@@ -18,20 +18,34 @@ menuIcon.addEventListener('click', () => {
     }
 })
 
-// Button nahoru 
+// dark/light přepínač 
 
-const btnUp = document.querySelector('.btn-up');
+        const header = document.querySelector("header")
+        const headerContainer = document.querySelector(".header-container")
+        const contentSection = document.querySelector(".content-section")
+        const footer = document.querySelector("footer")
+        const darkLightSwitch = document.querySelector(".dark-light")
+        const contactForm = document.querySelector(".contact-form")
+        const registerForm = document.querySelector(".register-form")
+        const body = document.querySelector('body')
+        const aboutSection = document.querySelector('.about-section')
+        const blog = document.querySelector('.blog-section')
 
-window.addEventListener('scroll', () => {
-    if(window.scrollY >= 560) {
-        btnUp.style.display = "block";
-    } else {
-        btnUp.style.display = "none";
-    }
+        
+        darkLightSwitch.addEventListener("click", () => {
 
-})
-
-
+            headerContainer.classList.toggle('dark-header')
+            header.classList.toggle('dark-header')
+            footer.classList.toggle('dark-footer')
+            darkLightSwitch.classList.toggle('dark-light-switch')
+            contactForm.classList.toggle('dark-forms')
+            registerForm.classList.toggle('dark-forms')   
+            btnUp.classList.toggle('button-up') 
+            body.classList.toggle('dark-content')
+            aboutSection.classList.toggle('dark-black')
+            blog.classList.toggle('dark-black')
+                    
+        })
 
 // Verifikace hesla
 const pass1 = document.querySelector(".pass1")
@@ -71,37 +85,22 @@ pass1.addEventListener("input", () => {
         
         if (pass1Value == "" && pass2Value == "") {
             passChecker.textContent = ""
-            
         }
 
     })
 
-        // dark/light přepínač 
+    
+// Button nahoru 
 
-        const header = document.querySelector("header")
-        const headerContainer = document.querySelector(".header-container")
-        const contentSection = document.querySelector(".content-section")
-        const footer = document.querySelector("footer")
-        const darkLightSwitch = document.querySelector(".dark-light")
-        const contactForm = document.querySelector(".contact-form")
-        const registerForm = document.querySelector(".register-form")
-        const body = document.querySelector('body')
-        const aboutSection = document.querySelector('.about-section')
-        const blog = document.querySelector('.blog-section')
+const btnUp = document.querySelector('.btn-up');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY >= 560) {
+        btnUp.style.display = "block";
+    } else {
+        btnUp.style.display = "none";
+    }
+
+})
 
 
-        
-        darkLightSwitch.addEventListener("click", () => {
-
-            headerContainer.classList.toggle('dark-header')
-            header.classList.toggle('dark-header')
-            footer.classList.toggle('dark-footer')
-            darkLightSwitch.classList.toggle('dark-light-switch')
-            contactForm.classList.toggle('dark-forms')
-            registerForm.classList.toggle('dark-forms')   
-            btnUp.classList.toggle('button-up') 
-            body.classList.toggle('dark-content')
-            aboutSection.classList.toggle('dark-black')
-            blog.classList.toggle('dark-black')
-                    
-        })

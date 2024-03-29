@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 <!-- Oldřich Lapka  -->
 <!-- lapka.oldrich@gmail.com  -->
 <!-- Oldřich L.(Olda) -->
@@ -13,11 +13,11 @@
     <script src="https://kit.fontawesome.com/986946cfaf.js" crossorigin="anonymous"></script>
     <title>Project-3</title>
 </head>
+
 <body>
     <!-- HEADER  -->
     <div class="header-container" id="header">
-    <header>
-        
+    <header>        
         <div class="logo">
             <div class="logo-wrap">
             <img src="./images/kolo-14kb.png" alt="logo">
@@ -26,10 +26,10 @@
         <nav>
             <ul class="nav-list">
                 <li><a href="#welcome">Domů</a></li>
-                <li><a href="./#about">O mě</a></li>   
-                <li><a href="./#events">Trasy</a></li>
-                <li><a href="./#blog">Blog</a></li>
-                <li><a href="./#events">Akce</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about">O mě</a></li>   
+                <li><a href="#events">Akce</a></li>
+                <li><a href="#blog">Blog</a></li>
             </ul>           
         </nav>
 <!-- dark/light switch  -->
@@ -45,34 +45,34 @@
 
     <main>
         <!-- WELCOME SECTION  -->
-        <section class="welcome-section" id="welcome">
+    <section class="welcome-section" id="welcome">
     <div class="welcome-intro">
             <h1 class="welcome-title">Na kole světem </h1>
         <div class="welcome-description">
-            <p>Kolo je cesta ke zdraví, zábavě a poznávání.</p><p>Šlapejte za dobrodružstvím ve světě, nebo za příjemnou projížďkou po krásné České republice. </p>
+                <p>Kolo je cesta ke zdraví, zábavě a poznávání.</p><p>Šlapejte za dobrodružstvím ve světě, nebo za příjemnou projížďkou po krásné České republice. </p>
         </div>
     </div>
     <!-- velcome gallery  -->
-            <div class="welcome-gallery">
+            <div class="welcome-gallery" id="contact">
                 <div class="img1-wrapper">
                     <img src="./images/balkan/balk-sterkova-cesta-v-horach.jpg" alt="">
                 </div>
                 <div class="img2-wrapper">
                     <img src="./images/balkan/balk-portret-helma-bryle.jpg" alt="">
                 </div>
-                <div class="img3-wrapper">
+                <div class="img3-wrapper" >
                     <img src="./images/doma/jedovnice-cesta-jezera.jpg" alt="">
                 </div>
             </div>
-        </section>
+        </section >
 
         <!-- CONTENT SECTION -->
-        <section class="content-section">
+        <section class="content-section" >
             <div class="content-narrow-container">
 
-                  <!-- contact form  -->
-            <div class="contact-form-wrapper">
-                <h2 class="contact-form-title">Napiš nám</h2>
+                <!-- contact form  -->
+            <div class="contact-form-wrapper" >
+                <h2 class="contact-form-title" >Napiš nám</h2>
                 <form class="contact-form">
                     <input type="text" placeholder="  Jméno" class="firstname" required><br>
                     <input type="text" placeholder="  Příjmení" class="surname"><br>
@@ -82,20 +82,17 @@
                         <option value="trip-cr">Výlet ČR</option>
                         <option value="konzultace">Konzultace</option>
                         <option value="jine">Jiné</option>
-                      </select><br>                
+                    </select><br>                
                     <input type="email" placeholder="  Email" class="email" required><br>
-                    
                     <textarea placeholder="  Tvoje zpráva" class="message" required></textarea><br>
-
                     <button class="submit-btn">Odeslat</button>
                 </form>
-            </div>
+            </div>            
             
-            
-             <!-- register form  -->
-             <div class="register-wrapper">
-             <h2 class="contact-form-title">Registruj se do týmu</h2>
-             <form class="register-form">
+            <!-- register form  -->
+            <div class="register-wrapper" id="about">
+            <h2 class="contact-form-title">Registruj se do týmu</h2>
+            <form class="register-form">
                  <input type="text" placeholder="  Jméno" class="firstname" required><br>
                  <input type="text" placeholder="  Příjmení" class="surname" required><br>
                  <select id="countryId1" name="country">
@@ -113,16 +110,25 @@
                  <textarea placeholder="  Tvoje zpráva" class="message"></textarea><br>
 
                  <button class="submit-btn">Odeslat</button>
-             </form>
+            </form>
             </div>
-
+             <!-- button up  -->
              <div class="btn-up">
                 <a href="./#welcome"><i class="fa-solid fa-angles-up"></i></a>
-            </div>       
+            </div>
         </section>
 
-         <!-- ABOUT ME SECTION -->
-         <section class="about-section" id="about">
+        <!-- contact  -->
+        <div class="contact">
+            <ul class="contact-info">
+                <li class="contact-me">Kontaktuj mě ...</li>
+                <li class="phone">      Tel: +420 777 987 852</li>
+                <li class="email">Email: <a href="mailto:email@email.cz">email@email.cz</a></li>    
+            </ul>                
+        </div>         
+
+        <!-- ABOUT ME SECTION -->
+        <section class="about-section" >
             <div class="about-narrow-container">
                 <h1 class="about-title" >O mě</h1>
                 <div class="about-description">
@@ -130,12 +136,11 @@
                     </p>
                 </div>
                 <div class="about-picture2-wrapper">
-                    <img src="./images/balkan/balk-portret-celk-kopce.jpg" alt="" class="me">
+                    <img src="./images/balkan/balk-portret-celk-kopce.jpg" alt="portrait" class="me">
                 </div>
                 <div class="about-picture1-wrapper">
-                    <img src="./images/palava/palava-kolo-brasny-u-vody.jpg" alt="bycicle" class="my-bike">
-                    </div>
-                    
+                    <img src="./images/palava/palava-kolo-brasny-u-vody.jpg" alt="bycicle" class="my-bike" id="events">
+                </div>                    
             </div>
         </section>
 
@@ -145,10 +150,12 @@
                 <h1 class="events-trails-title">Akce a trasy</h1>
                 <div class="trails-description">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error suscipit ex possimus, fuga excepturi atque architecto officiis perspiciatis tenetur sed, dolores odio natus maxime recusandae id voluptatem, illum voluptates! Vero illum sit necessitatibus nihil eveniet suscipit placeat reprehenderit, aspernatur cum sed! Quaerat placeat maxime atque, magni perspiciatis earum nobis!</p>
-                </div>
-                
+                </div>    
+
+                <!-- events  -->
                     <div class="events-wrapper">
                         <h2 class="events-title">Přidej se na akce</h2>
+
                         <!-- events table1  -->
                         <table class="events-table1">
                             <caption>Akce 2024</caption>
@@ -212,7 +219,6 @@
                                     <td>350,-</td>
                                 </tr>
                             </tbody>
-
                         </table>
 
                         <!-- events table2  -->
@@ -264,9 +270,10 @@
                                     <td>350,-</td>
                                 </tr>
                             </tbody>
-
                         </table>
                     </div>
+
+                    <!-- trails  -->
                     <div class="trails-wrapper">
                         <h2 class="trails-title">Naše trasy</h2>
                         <div class="adamov">
@@ -277,12 +284,11 @@
                             <h3>Brno - Jedovnice - Brno</h3>
                             <p>Trasa pro mírně pokročilé po silnici i v lese na cestách. Pouze pro horská kola nebo gravel. Trasa je dlouhá do 100km a vyžaduje i umění jízdy v terénu. Akce je na jeden den. </p>                            
                         </div>
-                        <div class="palava">
+                        <div class="palava" id="blog">
                             <h3>Brno - Pálava - Brno</h3>
                             <p>Trasa pro pokročilé. Ujedeme hodně kilometrů, asi 120 - 150km. Většinu cesty po silnici a cyklostezkách po rovince. Na Pálavě nás přesto čeká pár kopečků. Doporučuji silniční nebo gravel kolo. Akce je na jeden den od rána do večera.</p>
                         </div>
-                    </div>
-               
+                    </div>              
             </div>
         </section>
 
@@ -291,29 +297,27 @@
             <div class="blog-narrow-container">
                 <h1 class="blog-title">Příběhy a články</h1>
                 <div class="blog-description">
-                    <p>Kolo je cesta ke zdraví, zábavě a poznávání.Šlapejte za dobrodružstvím ve světě, nebo za příjemnou projížďkou po krásné České republice. </p>
+                    <p>Na cyklo výletech zažiješ spoustu legrace i dobrodružství. Získáš nové přátele a budeš mít o čem vyprávět. Tady jsou naše příběhy a postřehy z našich cyklistických akcí. Těšíme se, že se k nám na další výlet přidáš. Příjemné čtení ...</p>
                 </div>
-                <div class="article1-wrapper">
+                <div class="article-wrapper">
                     <h2>S kolem na Balkáně</h2>
                     <div class="img-wrapper">
                         <img class="img-article" src="./images/balkan/balk-olda-balkan-ruze.jpg" alt="">
                     </div> 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos ab! Laborum aut molestias est accusantium voluptatem, non dolorem atque corrupti provident totam voluptate dolores excepturi recusandae consequuntur eligendi eveniet id porro facilis adipisci cum quo incidunt vero. Corrupti est voluptatum magni perferendis, nihil officiis quasi ipsam nemo alias! Delectus veritatis tenetur laboriosam rem beatae dicta magnam ab exercitationem natus? Quaerat, ex iure! Praesentium, sit tempore dolores dolor veniam ex hic itaque labore, maxime, delectus eius fugit eos nisi voluptatum excepturi? Libero sapiente voluptas assumenda, harum similique totam pariatur eveniet molestiae vero eligendi architecto corporis eius exercitationem! Quis, sapiente, dolorum dolores provident iusto dolor repellendus reiciendis necessitatibus enim, pariatur illo inventore magnam eligendi incidunt. Sit quasi placeat tenetur, debitis optio nihil recusandae maxime consectetur possimus voluptatum, sapiente suscipit, labore excepturi similique non. Temporibus sunt ipsum ullam animi quaerat labore ipsa autem voluptatum totam voluptatem, architecto, quod tempora quia maiores laboriosam.
                     </p>
-                  </div>
+                </div>
 
-                  <div class="article1-wrapper">
+                <div class="article-wrapper">
                     <h2>Jedovnické rybníky</h2>
                     <div class="img-wrapper">
                         <img class="img-article" src="./images/doma/jedovnice-vrba.jpg" alt="">
                     </div> 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos ab! Laborum aut molestias est accusantium voluptatem, non dolorem atque corrupti provident totam voluptate dolores excepturi recusandae consequuntur eligendi eveniet id porro facilis adipisci cum quo incidunt vero. Corrupti est voluptatum magni perferendis, nihil officiis quasi ipsam nemo alias! Delectus veritatis tenetur laboriosam rem beatae dicta magnam ab exercitationem natus? Quaerat, ex iure! Praesentium, sit tempore dolores dolor veniam ex hic itaque labore, maxime, delectus eius fugit eos nisi voluptatum excepturi? Libero sapiente voluptas assumenda, harum similique totam pariatur eveniet molestiae vero eligendi architecto corporis eius exercitationem! Quis, sapiente, dolorum dolores provident iusto dolor repellendus reiciendis necessitatibus enim, pariatur illo inventore magnam eligendi incidunt. Sit quasi placeat tenetur, debitis optio nihil recusandae maxime consectetur possimus voluptatum, sapiente suscipit, labore excepturi similique non. Temporibus sunt ipsum ullam animi quaerat labore ipsa autem voluptatum totam voluptatem, architecto, quod tempora quia maiores laboriosam.
                     </p>
-                  </div>
+                </div>
             </div>
-        </section>
-    
-   
+        </section>     
     </main>
 
         <!-- FOOTER -->
